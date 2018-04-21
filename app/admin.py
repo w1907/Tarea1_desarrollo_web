@@ -11,4 +11,12 @@ class PlayerAdmin(admin.ModelAdmin):
 	list_display = ('nombre', 'apodo', 'fecha_nacimiento', 'edad', 'rut')
 	search_fields = ['nombre', 'apodo', 'rut']
 	list_filter = ['team']
-# Register your models here.
+
+@admin.register(Partido)
+class PartidoAdmin(admin.ModelAdmin):
+	list_display = ('nombre_partido',)
+
+@admin.register(Coach)
+class CoachAdmin(admin.ModelAdmin):
+	list_display = ('nombre', 'edad', 'email')
+# Register your here.
